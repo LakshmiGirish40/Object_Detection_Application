@@ -53,7 +53,8 @@ if file_option == "Upload your own file" and uploaded_file is not None:
         
         if app_mode == "Face Detection":
             # Detect Faces
-            faces = loaded_classifiers.detectMultiScale(gray, 1.3, 5)
+           classifier = loaded_classifiers["face"]  # or another classifier type
+           faces = classifier.detectMultiScale(gray, 1.3, 5)
             for (x, y, w, h) in faces:
                 cv2.rectangle(img, (x, y), (x + w, y + h), (127, 0, 255), 2)
             st.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), caption="Processed Video Frame", use_column_width=True)
