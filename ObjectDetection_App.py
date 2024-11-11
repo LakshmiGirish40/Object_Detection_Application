@@ -52,13 +52,12 @@ if file_option == "Upload your own file" and uploaded_file is not None:
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         
         if app_mode == "Face Detection":
-            # Detect Faces
-           classifier = loaded_classifiers["face"]  # or another classifier type
-           faces = classifier.detectMultiScale(gray, 1.3, 5)
+            classifier = loaded_classifiers["face"]  # or another classifier type
+            faces = classifier.detectMultiScale(gray, 1.3, 5)
             for (x, y, w, h) in faces:
                 cv2.rectangle(img, (x, y), (x + w, y + h), (127, 0, 255), 2)
-            st.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), caption="Processed Video Frame", use_column_width=True)
-            time.sleep(0.1)  # Add a small delay to allow real-time video processing
+                st.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), caption="Processed Video Frame", use_column_width=True)
+                time.sleep(0.1)  # Add a small delay to allow real-time video processing
 
         elif app_mode == "Eye Detection":
             # Detect Eyes
