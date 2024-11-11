@@ -19,7 +19,7 @@ def load_classifiers(file_path):
     return classifiers
 
 # Load the classifiers (make sure to point to your actual pickle file)
-loaded_classifiers = load_classifiers("classifiers_paths.pkl")
+loaded_classifiers = cv2.load_classifiers("classifiers_paths.pkl")
 
 # Title of the Streamlit app
 st.title("OpenCV Object Detection App")
