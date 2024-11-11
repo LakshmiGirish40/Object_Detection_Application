@@ -4,3 +4,4 @@ numpy
 tempfile
 pickle
 os
+python = 1.21.2 
