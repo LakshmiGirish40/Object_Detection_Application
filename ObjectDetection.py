@@ -60,6 +60,6 @@ def process_media(file_path, detection_type):
         cv2.destroyAllWindows()
 
 # Example usage
-file_path = r"D:\pictures\training\happy\img4.jpg"  # Provide path to your image or video file
+file_path = r'img4.jpg'  # Provide path to your image or video file
 detection_type = "Face"  # Choose detection type: Face, Eye, Body, Car, License Plate, Smile, Right Eye
 process_media(file_path, detection_type)
