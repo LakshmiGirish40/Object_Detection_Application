@@ -47,6 +47,10 @@ if file_option == "Upload your own file":
 if file_option == "Upload your own file" and uploaded_file is not None:
     # Handle file upload (image or video)
     if uploaded_file.name.endswith(('.jpg', '.png')):
+        with tempfile.NamedTemporaryFile(delete=False, suffix=uploaded_file.name) as temp_file:
+            temp_file.write(uploaded_file.read())
+            uploaded_file_path = temp_file.name
+        
         image = np.array(bytearray(uploaded_file.read()), dtype=np.uint8)
         img = cv2.imdecode(image, 1)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
