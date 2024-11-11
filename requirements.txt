@@ -4,3 +4,5 @@ numpy
 pickle
 os
 python 
+lxml
+xmltodict
