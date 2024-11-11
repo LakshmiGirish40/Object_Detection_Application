@@ -5,13 +5,13 @@ import pickle
 
 # Load classifiers for different detections
 classifiers = {
-    "face": r"D:/Data_Science&AI/Spyder/OpenCV/Haarcascades/haarcascade_frontalface_default.xml",
-    "eye": r"D:/Data_Science&AI/Spyder/OpenCV/Haarcascades/haarcascade_eye_tree_eyeglasses.xml",
-    "fullbody": r"D:/Data_Science&AI/Spyder/OpenCV/Haarcascades/haarcascade_fullbody.xml",
-    "car": r"D:/Data_Science&AI/Spyder/OpenCV/Haarcascades/haarcascade_car.xml",
-    "plate": r"D:/Data_Science&AI/Spyder/OpenCV/Haarcascades/haarcascade_license_plate_rus_16stages.xml",
-    "smile": r"D:/Data_Science&AI/Spyder/OpenCV/Haarcascades/haarcascade_smile.xml",
-    "right_eye": r"D:/Data_Science&AI/Spyder/OpenCV/Haarcascades/haarcascade_righteye_2splits.xml"
+    "face": r"haarcascade/haarcascade_frontalface_default.xml",
+    "eye": r"haarcascade/haarcascade_eye.xml",
+    "fullbody": r"haarcascade/haarcascade_fullbody.xml",
+    "car": r"haarcascade/haarcascade_car.xml",
+    "plate": r"haarcascade/haarcascade_license_plate_rus_16stages.xml",
+    "smile": r"haarcascade/haarcascade_smile.xml",
+    "right_eye": r"haarcascade/haarcascade_righteye_2splits.xml"
 }
 
 # Save classifiers paths
